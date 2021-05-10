@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Valuation Calculator</string>
+    <string name="x">X</string>
+    <string name="y">Y</string>
+    <string name="value">Value</string>
+    <string name="getvalue">Get Value</string>
+    <string name="_2112">2112</string>
+    <string name="valuation_calculator">Valuation Calculator</string>
+    <string name="developed_by"> Developed by Febin Rukfan</string>
+</resources>
