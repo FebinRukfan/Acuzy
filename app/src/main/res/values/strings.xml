@@ -7,4 +7,17 @@
     <string name="_2112">2112</string>
     <string name="valuation_calculator">Valuation Calculator</string>
     <string name="developed_by"> Developed by Febin Rukfan</string>
+    <string name="cpwd_rate">CPWD RATE</string>
+    <string name="_2482">2482</string>
+    <string name="_2116">2116</string>
+    <string name="_1812">1812</string>
+    <string name="_1542">1542</string>
+    <string name="percentage">%</string>
+    <string name="depriciation">DEPRICIATION</string>
+    <string name="age_of_building">AGE OF BUILDING</string>
+    <string name="age">AGE</string>
+    <string name="area">BUILDING AREA</string>
+    <string name="sqt_ft">Sqt.Ft.</string>
+    <string name="framed_structure">FRAMED STRUCTURE</string>
+    <string name="rupee">₹</string>
 </resources>

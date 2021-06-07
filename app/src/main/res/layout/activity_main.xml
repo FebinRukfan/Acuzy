@@ -7,145 +7,592 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/noto_kufi_bold"
-        android:gravity="center"
-        android:padding="5dp"
-        android:text="@string/valuation_calculator"
-        android:textColor="@color/black"
-        android:textSize="26sp"
+
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <EditText
-            android:id="@+id/edt_xvalue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@drawable/edt_custbg"
-            android:fontFamily="@font/noto_kufi_bold"
-            android:gravity="center"
-            android:hint="@string/x"
-            android:textColorHint="@color/black"
-            android:inputType="numberDecimal"
-            android:padding="8dp"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/edt_yvalue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@drawable/edt_custbg"
-            android:fontFamily="@font/noto_kufi_bold"
-            android:gravity="center"
-            android:hint="@string/y"
-            android:inputType="numberDecimal"
-            android:padding="8dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-
-            android:textSize="24sp" />
-
-        <CheckBox
-            android:id="@+id/chk_optional"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/noto_kufi_bold"
-            android:hint="@string/_2112"
-            android:textColorHint="@color/black"
-            android:textSize="26sp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@drawable/edt_custbgred"
-            android:orientation="horizontal"
-            android:padding="4dp"
+            android:layout_height="match_parent"
 
-            android:weightSum="2">
+            android:orientation="vertical">
 
 
             <TextView
-                android:layout_width="0dp"
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/noto_kufi_bold"
                 android:gravity="center"
-                android:text="@string/value"
+                android:padding="5dp"
+                android:text="@string/valuation_calculator"
                 android:textColor="@color/black"
                 android:textSize="26sp" />
 
-
-            <TextView
-
-                android:id="@+id/txt_value"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.5"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
 
-                android:fontFamily="@font/noto_kufi_bold"
-                android:gravity="center"
-                android:padding="6dp"
-                android:textColor="@color/black"
 
-                android:textSize="26sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edt_custbg"
+                    android:fontFamily="@font/noto_kufi_bold"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/black"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.95"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:padding="8dp"
+                        android:text="@string/cpwd_rate"
+
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:background="@color/hash" />
+
+
+                    <EditText
+                        android:id="@+id/edt_cpwdrate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.975"
+                        android:background="@drawable/edt_blankbg"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:gravity="center"
+                        android:hint="@string/rupee"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hash"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edt_custbg"
+                    android:fontFamily="@font/noto_kufi_bold"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/black"
+                    android:weightSum="10">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.975"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:textColorHint="@color/black"
+                        android:weightSum="5">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3.5"
+                            android:fontFamily="@font/noto_kufi_bold"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:orientation="horizontal"
+                            android:textColorHint="@color/black">
+
+                            <CheckBox
+                                android:id="@+id/chk_1542"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="2.5"
+                                android:fontFamily="@font/noto_kufi_bold"
+                                android:hint="@string/_1542"
+
+                                android:textColorHint="@color/black"
+                                android:textSize="26sp" />
+
+                            <CheckBox
+                                android:id="@+id/chk_1812"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="2.475"
+                                android:fontFamily="@font/noto_kufi_bold"
+                                android:hint="@string/_1812"
+
+                                android:textColorHint="@color/black"
+                                android:textSize="26sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/noto_kufi_bold"
+                            android:gravity="center"
+                            android:padding="2sp"
+                            android:text="LOAD BEARING STRUCTURE"
+                            android:textColor="@color/red"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+
+                        android:background="@color/hash" />
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.975"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:textColorHint="@color/black"
+                        android:weightSum="5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="3.5"
+                            android:fontFamily="@font/noto_kufi_bold"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:orientation="horizontal"
+                            android:textColorHint="@color/black">
+
+                            <CheckBox
+                                android:id="@+id/chk_2116"
+                                android:layout_width="0dp"
+                                android:layout_height="34dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="2.475"
+                                android:fontFamily="@font/noto_kufi_bold"
+                                android:hint="@string/_2116"
+                                android:textColorHint="@color/red"
+
+                                android:textSize="26sp" />
+
+                            <CheckBox
+                                android:id="@+id/chk_2482"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="2.5"
+                                android:fontFamily="@font/noto_kufi_bold"
+                                android:hint="@string/_2482"
+
+                                android:textColorHint="@color/red"
+                                android:textSize="26sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.5"
+                            android:fontFamily="@font/noto_kufi_bold"
+                            android:gravity="center"
+                            android:padding="2sp"
+                            android:text="@string/framed_structure"
+                            android:textColor="@color/red"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edt_custbg"
+                    android:fontFamily="@font/noto_kufi_bold"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/black"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.95"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:padding="8dp"
+                        android:text="@string/depriciation"
+
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:background="@color/hash" />
+
+
+                    <EditText
+                        android:id="@+id/edt_depriciation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.975"
+                        android:background="@drawable/edt_blankbg"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:gravity="center"
+                        android:hint="@string/percentage"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hash"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edt_custbg"
+                    android:fontFamily="@font/noto_kufi_bold"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/black"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.95"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:padding="8dp"
+                        android:text="@string/age_of_building"
+
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:background="@color/hash" />
+
+
+                    <EditText
+                        android:id="@+id/edt_age"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.975"
+                        android:background="@drawable/edt_blankbg"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:gravity="center"
+                        android:hint="@string/age"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hash"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edt_custbg"
+                    android:fontFamily="@font/noto_kufi_bold"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/black"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.95"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:padding="8dp"
+                        android:text="@string/area"
+
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:background="@color/hash" />
+
+
+                    <EditText
+                        android:id="@+id/edt_area"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.975"
+                        android:background="@drawable/edt_blankbg"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:gravity="center"
+                        android:hint="@string/sqt_ft"
+                        android:inputType="numberDecimal"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hash"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_getvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/red"
+                    android:fontFamily="@font/noto_kufi_bold"
+                    android:text="@string/getvalue"
+                    android:textAllCaps="false"
+
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edt_custbg"
+                    android:fontFamily="@font/noto_kufi_bold"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/black"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.95"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:padding="8dp"
+                        android:text="RATE PER SQ.FT."
+
+                        android:textColor="@color/blue"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:background="@color/hash" />
+
+
+                    <TextView
+                        android:id="@+id/txt_rate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.975"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:gravity="center"
+                        android:hint="@string/rupee"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hash"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/edt_custbg"
+                    android:fontFamily="@font/noto_kufi_bold"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:textColorHint="@color/black"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.95"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:padding="8dp"
+                        android:text="BUILDING VALUE"
+
+                        android:textColor="@color/blue"
+                        android:textSize="20sp" />
+" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.05"
+                        android:background="@color/hash" />
+
+
+                    <TextView
+                        android:id="@+id/txt_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4.975"
+                        android:fontFamily="@font/noto_kufi_bold"
+                        android:gravity="center"
+                        android:hint="@string/rupee"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hash"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_developer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:elevation="5dp"
+                    android:focusable="true"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+
+                    android:text="© linkedin.com/in/febinrukfan"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp" />
+                <!--        <EditText-->
+                <!--            android:id="@+id/edt_xvalue"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_margin="20dp"-->
+                <!--            android:background="@drawable/edt_custbg"-->
+                <!--            android:fontFamily="@font/noto_kufi_bold"-->
+                <!--            android:gravity="center"-->
+                <!--            android:hint="@string/x"-->
+                <!--            android:inputType="numberDecimal"-->
+                <!--            android:padding="8dp"-->
+                <!--            android:textColor="@color/black"-->
+                <!--            android:textColorHint="@color/black"-->
+                <!--            android:textSize="24sp" />-->
+
+                <!--        <EditText-->
+                <!--            android:id="@+id/edt_yvalue"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_margin="20dp"-->
+                <!--            android:background="@drawable/edt_custbg"-->
+                <!--            android:fontFamily="@font/noto_kufi_bold"-->
+                <!--            android:gravity="center"-->
+                <!--            android:hint="@string/y"-->
+                <!--            android:inputType="numberDecimal"-->
+                <!--            android:padding="8dp"-->
+                <!--            android:textColor="@color/black"-->
+                <!--            android:textColorHint="@color/black"-->
+
+                <!--            android:textSize="24sp" />-->
+
+
+                <!--        <LinearLayout-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_margin="20dp"-->
+                <!--            android:background="@drawable/edt_custbgred"-->
+                <!--            android:orientation="horizontal"-->
+                <!--            android:padding="4dp"-->
+
+                <!--            android:weightSum="2">-->
+
+
+                <!--            <TextView-->
+                <!--                android:layout_width="0dp"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_weight="0.5"-->
+                <!--                android:fontFamily="@font/noto_kufi_bold"-->
+                <!--                android:gravity="center"-->
+                <!--                android:text="@string/value"-->
+                <!--                android:textColor="@color/black"-->
+                <!--                android:textSize="26sp" />-->
+
+
+                <!--            <TextView-->
+
+                <!--                android:id="@+id/txt_value"-->
+                <!--                android:layout_width="0dp"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_weight="1.5"-->
+
+                <!--                android:fontFamily="@font/noto_kufi_bold"-->
+                <!--                android:gravity="center"-->
+                <!--                android:padding="6dp"-->
+                <!--                android:textColor="@color/black"-->
+
+                <!--                android:textSize="26sp" />-->
+
+
+                <!--        </LinearLayout>-->
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_getvalue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/red"
-            android:fontFamily="@font/noto_kufi_bold"
-            android:text="@string/getvalue"
-            android:textAllCaps="false"
 
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+    </ScrollView>
 
 
-    </LinearLayout>
 
-    <TextView
-        android:id="@+id/txt_developer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:drawableLeft="@drawable/ic_linkedin"
-        android:fontFamily="sans-serif"
-        android:gravity="center"
-        android:text="  Developed by Febin Rukfan"
-        android:textColor="@color/blue"
-        android:clickable="true"
-        android:focusable="true"
-        android:elevation="5dp"
-        android:textSize="14sp"
-        android:autoLink="web"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
